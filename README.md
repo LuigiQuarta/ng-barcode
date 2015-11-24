@@ -1,6 +1,8 @@
-jquery-barcode
+ngBarcode
 ==============
 
-A jQuery plugin for code39 barcodes
+An AngularJS directive that creates code39 barcodes based on the Antonello Pasella's [jquery-barcode plugin](https://github.com/antonellopasella/jquery-barcode).
 
-This is [a demo](http://jquery-barcode.googlecode.com/svn/trunk/jquery-barcode/demo/demo.html "Demo")
+# Usage
+
+

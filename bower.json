@@ -1,7 +1,0 @@
-{
-  "name": "jquery-barcode",
-  "version": "0.3",
-  "dependencies": {
-    "jquery": ">= 1.7.0"
-  }
-}
