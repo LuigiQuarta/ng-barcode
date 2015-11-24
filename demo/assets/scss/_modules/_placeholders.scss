@@ -1,0 +1,20 @@
+%display-flex {
+  @include flexbox((
+    display: flex,
+  ), 1 2 3);
+  @include flexbox((
+    display: flex,
+  ), 3);
+}
+
+%appearance-none {
+  @include appearance(none);
+}
+
+%reset-border {
+  border: none;
+}
+
+%reset-outline {
+  outline: none;
+}

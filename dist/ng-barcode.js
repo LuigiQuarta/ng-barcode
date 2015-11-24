@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('ngBarcode')
+        .module('ngBarcode', [])
         .directive('ngBarcode', ngBarcode);
 
 
@@ -11,11 +11,11 @@
             bindToController: true,
             controller: BarcodeCtrl,
             controllerAs: 'barcodeCtrl',
-            restrict: 'E',
-            template: '<img alt="Embedded Image" style="width:100%; height:67px;" src="{{barcodeCtrl.base64Barcode()}}" />',
+            restrict: 'AEC',
+            template: '<img width="100%" height="100%" ng-src="{{barcodeCtrl.base64Barcode()}}" />',
             scope: {
-                input: '@',
-                code: '@'
+                input: '@ngBarcodeInput',
+                code: '@ngBarcodeCode'
             }
         };
 
@@ -278,10 +278,4 @@
 
         barcodeCtrl.base64Barcode = generateBarcode;
     }
-})();
-(function () {
-    'use strict';
-
-    angular
-        .module('ngBarcode', []);
 })();
