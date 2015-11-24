@@ -1,0 +1,37 @@
+{
+  "name": "ng-barcode",
+  "version": "1.0.0",
+  "description": "An AngularJS directive that creates code39 barcodes based on the Antonello Pasella's jquery-barcode plugin.",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.4.8",
+    "gulp": "^3.9.0"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zoimaru/ng-barcode.git"
+  },
+  "keywords": [
+    "AngularJS",
+    "Barcode"
+  ],
+  "author": [
+    "Luigi Quarta",
+    "Lorenzo D'Ianni",
+    "Michele Santini",
+    "Massimo Travagli"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zoimaru/ng-barcode/issues"
+  },
+  "homepage": "https://github.com/Zoimaru/ng-barcode#readme"
+}
