@@ -9,4 +9,7 @@ Try ng-barcode using this [online demo](http://zoimaru.github.io/ng-barcode/).
 
 # Usage
 
+```sh
+$ npm install ng-barcode
+```
 

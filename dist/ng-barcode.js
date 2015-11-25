@@ -5,7 +5,6 @@
         .module('ngBarcode', [])
         .directive('ngBarcode', ngBarcode);
 
-
     function ngBarcode() {
         var directive = {
             bindToController: true,
@@ -119,7 +118,6 @@
                     codes.code39.BMP[x] += '\x01\x01\x01';
                 }
             }
-            ;
 
             return barcodeBMP();
         }
@@ -144,10 +142,9 @@
                     alert("Code" + code + ' not implemented');
                     return;
             }
-            ;
 
             return createBmp([encoded], palette);
-        };
+        }
 
         function encode64(input) {
             var output = '';
@@ -178,7 +175,7 @@
             while (i < input.length);
 
             return output;
-        };
+        }
 
         encode64.keyStr = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
 
@@ -209,7 +206,7 @@
                 throw('Overflow, number too big for string length');
 
             return string;
-        };
+        }
 
         function createBmp(grid, palette) {
             // xxxx and yyyy are placeholders for offsets (computed later).
@@ -227,7 +224,6 @@
             var bitmapInfoHeader = bfOffBits + biWidth + biHeight + '\x01\0' + biBitCount + '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0';
 
             if (bitCount != 24) {
-                var palette_str = String(palette);
                 var rgbQuad = [];
                 var r = 0;
                 var g = 0;
@@ -274,7 +270,7 @@
             bitmap = bitmap.replace(/xxxx/, multiByteEncode(bitmap.length, 4));
 
             return 'data:image/bmp;base64,' + encode64(bitmap);
-        };
+        }
 
         barcodeCtrl.base64Barcode = generateBarcode;
     }
