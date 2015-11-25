@@ -4,4 +4,5 @@ out
 gen
 /demo/assets/scss/.tmp
 ./node_modules
+/node_modules
 demo/assets/scss/.tmp
