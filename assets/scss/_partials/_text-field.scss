@@ -1,0 +1,28 @@
+.text-field {
+  @extend %display-flex;
+
+  input {
+    @extend %appearance-none;
+    @extend %reset-outline;
+    padding: 8px;
+    font-size: $font-size;
+    border: 1px solid $primary-color;
+    border-right: none;
+    @include border-radius(2px 0 0 2px);
+    @include flex-grow(2);
+  }
+
+  button {
+    @extend %appearance-none;
+    @extend %reset-border;
+    @extend %reset-outline;
+    cursor: pointer;
+    color: $primary-color-text;
+    font-size: $font-size - 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: $primary-color;
+    @include border-radius(0 2px 2px 0);
+    @include flex-grow(1);
+  }
+}

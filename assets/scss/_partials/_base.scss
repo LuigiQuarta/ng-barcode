@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  @include font-smoothing(on);
+  @include box-sizing(border-box);
+  &:before, &:after {
+    @extend *;
+  }
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  @extend html;
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+  font: 400 14px/100% 'Verdana', sans-serif;
+}
