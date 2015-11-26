@@ -1,8 +1,8 @@
 {
   "name": "ng-barcode",
   "version": "1.0.0",
-  "description": "An AngularJS directive that creates code39 barcodes based on the Antonello Pasella's jquery-barcode plugin.",
-  "main": "index.html",
+  "description": "\"An AngularJS directive that generates code39 barcodes\"",
+  "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.0",
@@ -20,7 +20,8 @@
   },
   "keywords": [
     "AngularJS",
-    "Barcode"
+    "Barcode",
+    "code39"
   ],
   "author": [
     "Luigi Quarta",
