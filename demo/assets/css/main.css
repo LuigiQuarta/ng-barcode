@@ -87,6 +87,15 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   outline: none;
 }
 
+/* line 1, ../scss/_modules/_typography.scss */
+h1, .h1 {
+  font-size: 52px;
+  line-height: 100%;
+  text-align: center;
+  margin: 40px 0;
+  color: #03A9F4;
+}
+
 /* line 1, ../scss/_partials/_base.scss */
 *, *:before, *:after {
   margin: 0;
