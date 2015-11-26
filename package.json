@@ -1,6 +1,6 @@
 {
   "name": "ng-barcode",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "\"An AngularJS directive that generates code39 barcodes\"",
   "main": "gulpfile.js",
   "dependencies": {},
