@@ -11,16 +11,10 @@
     "url": "git+https://github.com/Zoimaru/ng-barcode.git"
   },
   "keywords": [
-    "AngularJS",
-    "Barcode",
+    "barcode",
     "code39"
   ],
-  "author": [
-    "Luigi Quarta",
-    "Lorenzo D'Ianni",
-    "Michele Santini",
-    "Massimo Travagli"
-  ],
+  "author": "Luigi Quarta <http://www.zoilab.org>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Zoimaru/ng-barcode/issues"
