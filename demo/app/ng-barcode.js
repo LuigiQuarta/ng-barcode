@@ -11,7 +11,7 @@
             controller: BarcodeCtrl,
             controllerAs: 'barcodeCtrl',
             restrict: 'AEC',
-            template: '<img width="100%" height="100%" ng-src="{{barcodeCtrl.base64Barcode()}}" />',
+            template: '<img width="100%" height="100%" ng-if="barcodeCtrl.input" ng-src="{{barcodeCtrl.base64Barcode()}}" />',
             scope: {
                 input: '@ngBarcodeInput',
                 code: '@ngBarcodeCode'
