@@ -125,7 +125,7 @@
         function barcodeBMP() {
             var encoded = '';
             var code = barcodeCtrl.code;
-            var input = barcodeCtrl.input;
+            var input = barcodeCtrl.input.toUpperCase();
             var palette = [[0, 0, 0], [255, 255, 255]];
 
             switch (code) {
