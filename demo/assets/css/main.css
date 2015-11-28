@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -89,7 +90,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /* line 1, ../scss/_modules/_typography.scss */
 h1, .h1 {
-  font-size: 52px;
+  font-size: 54px;
+  font-weight: 300;
   line-height: 100%;
   text-align: center;
   margin: 0 0 40px 0;
@@ -109,17 +111,16 @@ h1, .h1 {
 
 /* line 11, ../scss/_partials/_base.scss */
 html, body {
-  height: 100%;
+  height: auto;
   min-height: 100%;
 }
 
 /* line 16, ../scss/_partials/_base.scss */
 body {
-  width: 95%;
-  max-width: 500px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 24px 0 0;
-  font: 400 14px/100% 'Verdana', sans-serif;
+  padding: 24px 5%;
+  font: 400 14px/100% 'Roboto', sans-serif;
 }
 
 /* line 1, ../scss/_partials/_ng-barcode.scss */
