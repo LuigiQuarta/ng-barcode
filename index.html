@@ -12,13 +12,42 @@
 
     <ng-barcode
         ng-barcode-input="{{demoCtrl.barcodeInput}}"
-        ng-barcode-code="code39">
+        ng-barcode-code="code39"
+        ng-barcode-color="{{demoCtrl.colorBarcode()}}"
+        ng-barcode-background="{{demoCtrl.colorBackground}}">
     </ng-barcode>
 
     <div class="text-field">
-        <input type="text" placeholder="Type and transform..." ng-model="demoCtrl.textField">
-        <button ng-click="demoCtrl.updateBarcode()">Update</button>
+        <input type="text" placeholder="Type and transform..." ng-model="demoCtrl.barcodeInput">
     </div>
+
+    <section>
+        <div class="list-action">
+            <h2 class="label">Color settings</h2>
+            <input type="checkbox" id="id-name--1" ng-model="demoCtrl.showHex" class="switch-input">
+            <label for="id-name--1" class="switch-label">HEX format</label>
+        </div>
+
+        <div ng-if="!demoCtrl.showHex" class="flex">
+            <div class="input-range">
+                <input type="range" min="0" max="255" ng-model="demoCtrl.rgb.r">
+                <div>Red:<br>{{demoCtrl.rgb.r}}</div>
+            </div>
+            <div class="input-range">
+                <input type="range" min="0" max="255" ng-model="demoCtrl.rgb.g">
+                <div>Green:<br>{{demoCtrl.rgb.g}}</div>
+            </div>
+            <div class="input-range">
+                <input type="range" min="0" max="255" ng-model="demoCtrl.rgb.b">
+                <div>Blue:<br>{{demoCtrl.rgb.b}}</div>
+            </div>
+        </div>
+
+        <div ng-if="demoCtrl.showHex" class="text-field">
+            <input type="text" ng-model="demoCtrl.hex">
+            <div class="label">HEX</div>
+        </div>
+    </section>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <script src="app/ng-barcode.js"></script>

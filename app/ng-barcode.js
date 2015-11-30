@@ -14,7 +14,9 @@
             template: '<img width="100%" height="100%" ng-if="barcodeCtrl.input" ng-src="{{barcodeCtrl.base64Barcode()}}" />',
             scope: {
                 input: '@ngBarcodeInput',
-                code: '@ngBarcodeCode'
+                code: '@ngBarcodeCode',
+                colorBarcode: '@ngBarcodeColor',
+                colorBackground: '@ngBarcodeBackground'
             }
         };
 
@@ -126,7 +128,10 @@
             var encoded = '';
             var code = barcodeCtrl.code;
             var input = barcodeCtrl.input.toUpperCase();
-            var palette = [[0, 0, 0], [255, 255, 255]];
+            var colorBarcode = formatColor(barcodeCtrl.colorBarcode, 1);
+            var colorBackground = formatColor(barcodeCtrl.colorBackground, 2);
+            var palette = [colorBarcode, colorBackground];
+
 
             switch (code) {
                 case 'code39' :
@@ -270,6 +275,44 @@
             bitmap = bitmap.replace(/xxxx/, multiByteEncode(bitmap.length, 4));
 
             return 'data:image/bmp;base64,' + encode64(bitmap);
+        }
+
+        function hexToRgb(hex) {
+            var rgb = null;
+
+            // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
+            var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+            hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+                return r + r + g + g + b + b;
+            });
+
+            var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+
+            if(result) {
+                rgb = [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)];
+            } else {
+                //alert('Color expression: "'+ hex +'" is not supported');
+                rgb = [0, 0, 0];
+            }
+
+            return rgb;
+        }
+
+        function formatColor(color, type) {
+            // type defines bar or background: 1 = bar | 2 = background
+            if(color) {
+                return isRgb(color) ? JSON.parse(color) : hexToRgb(color);
+            } else {
+                return type === 1 ? [0, 0, 0] : [255, 255, 255]
+            }
+        }
+
+        function isRgb(color) {
+            try {
+                return JSON.parse(color);
+            } catch(e) {
+                return false;
+            }
         }
 
         barcodeCtrl.base64Barcode = generateBarcode;
