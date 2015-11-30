@@ -291,7 +291,7 @@
             if(result) {
                 rgb = [parseInt(result[1], 16), parseInt(result[2], 16), parseInt(result[3], 16)];
             } else {
-                alert('Color expression: "'+ hex +'" is not supported');
+                //alert('Color expression: "'+ hex +'" is not supported');
                 rgb = [0, 0, 0];
             }
 
