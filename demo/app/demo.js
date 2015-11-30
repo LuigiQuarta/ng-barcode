@@ -7,24 +7,31 @@
         ])
         .controller('DemoCtrl', [DemoCtrl]);
 
-    function DemoCtrl(){
-        this.barcodeInput = this.barcodeInput || 'Hello world';
+    function DemoCtrl() {
+        var demoCtrl = this;
+        var defaultInputs = [];
 
-        this.hex = '#03A9F4';
-        this.rgb = {
-            r: 0,
-            g: 0,
-            b: 0
-        };
+        defaultInputs['code39'] = 'Hello World';
+        defaultInputs['i25'] = '010101';
 
-        this.colorBarcode = getBarcodeColor;
-        this.colorBackground = [255, 255, 255];
+        demoCtrl.textField = defaultInputs['code39'];
+        demoCtrl.updateBarcode = updateBarcode;
+
+        updateBarcode();
+
+        function updateBarcode() {
+            demoCtrl.hex = '#03A9F4';
+            demoCtrl.rgb = { r: 0, g: 0, b: 0 };
+            demoCtrl.colorBarcode = getBarcodeColor;
+            demoCtrl.colorBackground = [255, 255, 255];
+            demoCtrl.barcodeInput = demoCtrl.textField;
+        }
 
         function getBarcodeColor() {
-            if(this.showHex) {
-                return this.hex;
+            if(demoCtrl.showHex) {
+                return demoCtrl.hex;
             } else {
-                return [this.rgb.r, this.rgb.g, this.rgb.b];
+                return [demoCtrl.rgb.r, demoCtrl.rgb.g, demoCtrl.rgb.b];
             }
         }
     }
