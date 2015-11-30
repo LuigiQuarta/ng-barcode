@@ -7,3 +7,4 @@ gen
 /node_modules
 demo/assets/scss/.tmp
 *.*~
+.DS_Store
