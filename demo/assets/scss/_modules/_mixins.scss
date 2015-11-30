@@ -9,6 +9,12 @@
   }
 }
 
+@mixin tap-highlight-color($value) {
+  -webkit-tap-highlight-color:$value;
+  -moz-tap-highlight-color:$value;
+  tap-highlight-color:$value;
+}
+
 @mixin flex-grow($value) {
   @include flexbox((
     flex-grow: $value,
