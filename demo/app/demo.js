@@ -8,8 +8,7 @@
         .controller('DemoCtrl', [DemoCtrl]);
 
     function DemoCtrl(){
-        this.textField = 'Hello world';
-        this.barcodeInput = this.barcodeInput || this.textField;
+        this.barcodeInput = this.barcodeInput || 'Hello world';
 
         this.hex = '#03A9F4';
         this.rgb = {
@@ -20,11 +19,6 @@
 
         this.colorBarcode = getBarcodeColor;
         this.colorBackground = [255, 255, 255];
-        this.updateBarcode = updateBarcode;
-
-        function updateBarcode(){
-            this.barcodeInput = this.textField;
-        }
 
         function getBarcodeColor() {
             if(this.showHex) {
