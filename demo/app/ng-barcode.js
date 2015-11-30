@@ -122,6 +122,17 @@
             return barcodeBMP();
         }
 
+        // Auxiliary function for the I25 encoding
+        // Returns true if the input has
+        function isValidI25Input(input) {
+          var isValidInput = false;
+
+          if( (input.length % 2 == 0) && !isNaN(parseInt(input)))
+            isValidInput = true;
+
+          return isValidInput;
+        }
+
         function barcodeBMP() {
             var encoded = '';
             var code = barcodeCtrl.code;
@@ -138,8 +149,37 @@
 
                     break;
 
+                case 'i25' :
+                    var code = input.trim();
+
+                    // Check on the input
+                    if(!isValidI25Input(code)) {
+                      throw 'Invalid input format';
+                      return;
+                    }
+
+                    encoded =   codes.I25.plain['START'];
+
+                    if(code.length % 2 == 1)
+                        code = '0' + code;
+
+                    for(var i = 0; i < code.length; i+=2) {
+                        var code1 = codes.I25.plain[code.charAt(i)];
+                        var code2 = codes.I25.plain[code.charAt(i+1)].replace(/b/g,"w").replace(/B/g, "W");
+                        for(var i2 = 0; i2 < 5; i2++) {
+                            encoded += code1.charAt(i2) + code2.charAt(i2);
+                        }
+                    }
+
+                    encoded +=  codes.I25.plain['END'];
+                    encoded = encoded.replace(/w/g, '\x01\x01\x01');
+                    encoded = encoded.replace(/W/g, '\x01\x01\x01\x01\x01\x01\x01\x01\x01');
+                    encoded = encoded.replace(/b/g, '\x00\x00\x00');
+                    encoded = encoded.replace(/B/g, '\x00\x00\x00\x00\x00\x00\x00\x00\x00');
+                    break;
+
                 default :
-                    alert("Code" + code + ' not implemented');
+                    throw 'Code ' + code + ' not implemented';
                     return;
             }
 

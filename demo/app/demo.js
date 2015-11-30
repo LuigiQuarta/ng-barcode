@@ -8,12 +8,19 @@
         .controller('DemoCtrl', [DemoCtrl]);
 
     function DemoCtrl(){
-        this.textField = 'Hello world';
-        this.barcodeInput = this.barcodeInput || this.textField;
-        this.updateBarcode = updateBarcode;
+        var demoCtrl = this;
+        var defaultInputs = [];
 
-        function updateBarcode(){
-            this.barcodeInput = this.textField;
+        defaultInputs['code39'] = 'Hello World';
+        defaultInputs['i25'] = '010101';
+
+        demoCtrl.textField = defaultInputs['i25'];
+        demoCtrl.updateBarcode = updateBarcode;
+
+        updateBarcode();
+
+        function updateBarcode() {
+            demoCtrl.barcodeInput = demoCtrl.textField;
         }
     }
 
