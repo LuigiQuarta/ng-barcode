@@ -4,25 +4,44 @@
   input {
     @extend %appearance-none;
     @extend %reset-outline;
+    width: 100%;
     padding: 8px;
     font-size: $font-size;
     border: 1px solid $primary-color;
     border-right: none;
     @include border-radius(2px 0 0 2px);
     @include flex-grow(2);
+    &:only-child {
+      border: 1px solid $primary-color;
+      @include border-radius(2px);
+    }
   }
 
-  button {
+  button, .label {
     @extend %appearance-none;
     @extend %reset-border;
     @extend %reset-outline;
-    cursor: pointer;
-    color: $primary-color-text;
+    @extend %display-flex;
+    @extend %align-items--center;
+    @extend %justify-content--center;
     font-size: $font-size - 2px;
     font-weight: 500;
+    padding: 8px;
     text-transform: uppercase;
-    background-color: $primary-color;
     @include border-radius(0 2px 2px 0);
     @include flex-grow(1);
+  }
+
+  button {
+    color: $primary-color-text;
+    background-color: $primary-color;
+    cursor: pointer;
+  }
+
+  .label {
+    color: $primary-color;
+    border: 1px solid $primary-color;
+    border-left: none;
+    cursor: default;
   }
 }

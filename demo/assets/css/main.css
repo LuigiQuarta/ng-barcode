@@ -1,4 +1,5 @@
-/* line 5, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
+/* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -20,80 +21,127 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body {
   line-height: 1;
 }
 
-/* line 24, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 /* line 1, ../scss/_modules/_placeholders.scss */
-.text-field {
+.flex, .text-field, .text-field button, .text-field .label, .input-range, .list-action {
   display: -moz-flex;
   display: -ms-flex;
   display: -webkit-flex;
   display: flex;
 }
 
-/* line 10, ../scss/_modules/_placeholders.scss */
-.text-field input, .text-field button {
+/* line 11, ../scss/_modules/_placeholders.scss */
+.text-field button, .text-field .label, .input-range {
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* line 19, ../scss/_modules/_placeholders.scss */
+.list-action {
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+/* line 30, ../scss/_modules/_placeholders.scss */
+.text-field button, .text-field .label, .list-action {
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 41, ../scss/_modules/_placeholders.scss */
+.input-range {
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+/* line 51, ../scss/_modules/_placeholders.scss */
+.text-field input, .text-field button, .text-field .label {
   -moz-appearance: none;
   -webkit-appearance: none;
 }
 
-/* line 14, ../scss/_modules/_placeholders.scss */
-.text-field button {
+/* line 55, ../scss/_modules/_placeholders.scss */
+.text-field button, .text-field .label {
   border: none;
 }
 
-/* line 18, ../scss/_modules/_placeholders.scss */
-.text-field input, .text-field button {
+/* line 59, ../scss/_modules/_placeholders.scss */
+.text-field input, .text-field button, .text-field .label {
   outline: none;
 }
 
 /* line 1, ../scss/_modules/_typography.scss */
 h1, .h1 {
-  font-size: 52px;
+  font-size: 54px;
+  font-weight: 300;
+  line-height: 118%;
+  text-align: center;
+  margin: 0 0 40px 0;
+  color: #03A9F4;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+/* line 11, ../scss/_modules/_typography.scss */
+h2, .h2 {
+  font-size: 40px;
+  font-weight: 300;
   line-height: 100%;
   text-align: center;
-  margin: 40px 0;
-  color: #03A9F4;
+  margin: 0 0 16px 0;
+  color: #727272;
 }
 
 /* line 1, ../scss/_partials/_base.scss */
@@ -105,20 +153,23 @@ h1, .h1 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
 }
 
-/* line 11, ../scss/_partials/_base.scss */
+/* line 12, ../scss/_partials/_base.scss */
 html, body {
-  height: 100%;
+  height: auto;
   min-height: 100%;
 }
 
-/* line 16, ../scss/_partials/_base.scss */
+/* line 17, ../scss/_partials/_base.scss */
 body {
-  width: 95%;
-  max-width: 500px;
+  max-width: 780px;
   margin: 0 auto;
-  font: 400 14px/100% 'Verdana', sans-serif;
+  padding: 24px 5%;
+  font: 400 14px/100% 'Roboto', sans-serif;
 }
 
 /* line 1, ../scss/_partials/_ng-barcode.scss */
@@ -130,6 +181,7 @@ ng-barcode, .ng-barcode, div[ng-barcode] {
 
 /* line 4, ../scss/_partials/_text-field.scss */
 .text-field input {
+  width: 100%;
   padding: 8px;
   font-size: 14px;
   border: 1px solid #03A9F4;
@@ -142,14 +194,19 @@ ng-barcode, .ng-barcode, div[ng-barcode] {
   -webkit-flex-grow: 2;
   flex-grow: 2;
 }
-/* line 15, ../scss/_partials/_text-field.scss */
-.text-field button {
-  cursor: pointer;
-  color: #FFFFFF;
+/* line 14, ../scss/_partials/_text-field.scss */
+.text-field input:only-child {
+  border: 1px solid #03A9F4;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 20, ../scss/_partials/_text-field.scss */
+.text-field button, .text-field .label {
   font-size: 12px;
   font-weight: 500;
+  padding: 8px;
   text-transform: uppercase;
-  background-color: #03A9F4;
   -moz-border-radius: 0 2px 2px 0;
   -webkit-border-radius: 0;
   border-radius: 0 2px 2px 0;
@@ -157,6 +214,296 @@ ng-barcode, .ng-barcode, div[ng-barcode] {
   -ms-flex-grow: 1;
   -webkit-flex-grow: 1;
   flex-grow: 1;
+}
+/* line 35, ../scss/_partials/_text-field.scss */
+.text-field button {
+  color: #FFFFFF;
+  background-color: #03A9F4;
+  cursor: pointer;
+}
+/* line 41, ../scss/_partials/_text-field.scss */
+.text-field .label {
+  color: #03A9F4;
+  border: 1px solid #03A9F4;
+  border-left: none;
+  cursor: default;
+}
+
+/* line 1, ../scss/_partials/_input-range.scss */
+.input-range {
+  width: 100%;
+}
+/* line 6, ../scss/_partials/_input-range.scss */
+.input-range > div {
+  width: 100%;
+  text-align: center;
+  line-height: 150%;
+}
+
+/* line 13, ../scss/_partials/_input-range.scss */
+input[type=range] {
+  position: relative;
+  width: 90%;
+  margin: 16px 0;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+/* line 18, ../scss/_partials/_input-range.scss */
+input[type=range]:focus {
+  outline: none;
+}
+/* line 20, ../scss/_partials/_input-range.scss */
+input[type=range]:focus::-webkit-slider-thumb {
+  width: 24px;
+  height: 24px;
+}
+/* line 24, ../scss/_partials/_input-range.scss */
+input[type=range]:focus::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+}
+/* line 28, ../scss/_partials/_input-range.scss */
+input[type=range]:focus::-ms-thumb {
+  width: 24px;
+  height: 24px;
+}
+/* line 34, ../scss/_partials/_input-range.scss */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  border: none;
+  background: #03A9F4;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 37, ../scss/_partials/_input-range.scss */
+input[type=range]::-webkit-slider-thumb {
+  position: relative;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  background: #03A9F4;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 42, ../scss/_partials/_input-range.scss */
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  border: none;
+  background: #03A9F4;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 45, ../scss/_partials/_input-range.scss */
+input[type=range]::-moz-range-thumb {
+  position: relative;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  background: #03A9F4;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 51, ../scss/_partials/_input-range.scss */
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  border: none;
+  background: #03A9F4;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 54, ../scss/_partials/_input-range.scss */
+input[type=range]::-ms-thumb {
+  position: relative;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border: none;
+  cursor: pointer;
+  background: #03A9F4;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 57, ../scss/_partials/_input-range.scss */
+input[type=range]::-ms-fill-lower, input[type=range]::-ms-fill-upper {
+  background: #03A9F4;
+  border: none;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* line 1, ../scss/_partials/_section.scss */
+section, .section {
+  padding: 48px 0;
+  margin: 48px auto;
+  border-top: 1px solid #B6B6B6;
+}
+/* line 5, ../scss/_partials/_section.scss */
+section:last-of-type, .section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 24px;
+}
+
+/* line 2, ../scss/_partials/_switch.scss */
+.switch-input {
+  display: none;
+}
+/* line 6, ../scss/_partials/_switch.scss */
+.switch-label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: left;
+  margin: 16px;
+  padding: 16px 0 16px 44px;
+}
+/* line 14, ../scss/_partials/_switch.scss */
+.switch-label:before, .switch-label:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  outline: 0;
+  top: 50%;
+  -moz-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+/* line 23, ../scss/_partials/_switch.scss */
+.switch-label:before {
+  left: 1px;
+  width: 34px;
+  height: 14px;
+  background-color: #9E9E9E;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 30, ../scss/_partials/_switch.scss */
+.switch-label:after {
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FAFAFA;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+  -webkit-box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.14), 0 2px 2px 0 rgba(0, 0, 0, 0.098), 0 1px 5px 0 rgba(0, 0, 0, 0.084);
+}
+/* line 39, ../scss/_partials/_switch.scss */
+.switch-label .toggle--on {
+  display: none;
+}
+/* line 40, ../scss/_partials/_switch.scss */
+.switch-label .toggle--off {
+  display: inline-block;
+}
+/* line 45, ../scss/_partials/_switch.scss */
+.switch-input:checked + .switch-label:before {
+  background-color: #A5D6A7;
+}
+/* line 48, ../scss/_partials/_switch.scss */
+.switch-input:checked + .switch-label:after {
+  background-color: #4CAF50;
+  -moz-transform: translate(80%, -50%);
+  -ms-transform: translate(80%, -50%);
+  -webkit-transform: translate(80%, -50%);
+  transform: translate(80%, -50%);
+}
+/* line 53, ../scss/_partials/_switch.scss */
+.switch-input:checked + .switch-label .toggle--on {
+  display: inline-block;
+}
+/* line 54, ../scss/_partials/_switch.scss */
+.switch-input:checked + .switch-label .toggle--off {
+  display: none;
+}
+
+/* line 7, ../scss/_partials/_list.scss */
+.list-action .label {
+  text-align: left;
+  -moz-flex-grow: 1;
+  -ms-flex-grow: 1;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+}
+/* line 11, ../scss/_partials/_list.scss */
+.list-action .switch-label {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */

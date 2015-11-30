@@ -3,21 +3,25 @@
   padding: 0;
   @include font-smoothing(on);
   @include box-sizing(border-box);
+  @include tap-highlight-color(rgba(black,0));
   &:before, &:after {
     @extend *;
   }
 }
 
 html {
-  height: 100%;
+  height: auto;
   min-height: 100%;
 }
 
 body {
   @extend html;
-  width: 95%;
-  max-width: 500px;
+  max-width: 780px;
   margin: 0 auto;
-  padding: 24px 0 0;
-  font: 400 14px/100% 'Verdana', sans-serif;
+  padding: 24px 5%;
+  font: 400 14px/100% 'Roboto', sans-serif;
+}
+
+.flex {
+  @extend %display-flex;
 }

@@ -1,0 +1,15 @@
+.list {
+  &-action {
+    @extend %display-flex;
+    @extend %align-items--center;
+    @extend %justify-content--space-around;
+
+    .label {
+      text-align: left;
+      @include flex-grow(1);
+    }
+    .switch-label {
+      margin-right: 0;
+    }
+  }
+}

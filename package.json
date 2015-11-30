@@ -1,6 +1,6 @@
 {
   "name": "ng-barcode",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "\"An AngularJS directive that generates code39 barcodes\"",
   "dependencies": {},
   "devDependencies": {
