@@ -17,3 +17,28 @@
     flex-grow: $value,
   ), 3);
 }
+
+@mixin input-range--track($height, $color, $radius) {
+  width: 100%;
+  height: $height;
+  cursor: pointer;
+  border: none;
+  background: $color;
+  @include box-shadow(none);
+  @include border-radius($radius);
+}
+
+@mixin input-range--thumb($width, $height, $color) {
+  position: relative;
+  top: 50%;
+  width: $width;
+  height: $height;
+  border: none;
+  cursor: pointer;
+  background: $color;
+  @include transform(translate(0, -50%));
+  @include border-radius(50%);
+  @include box-shadow(0 1px 3px 0 rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 2px 1px -1px rgba(0,0,0,.12));
+  @include appearance(none);
+  @include transition(all 0.3s ease);
+}

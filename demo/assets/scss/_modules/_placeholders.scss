@@ -7,6 +7,47 @@
   ), 3);
 }
 
+%justify-content {
+  &--center {
+    @include flexbox((
+      justify-content: center
+    ), 1 2 3);
+    @include flexbox((
+      justify-content: center
+    ), 3);
+  }
+  &--space-around {
+    @include flexbox((
+      justify-content: space-around
+    ), 1 2 3);
+    @include flexbox((
+      justify-content: space-around
+    ), 3);
+  }
+}
+
+%align-items {
+  &--center {
+    @include flexbox((
+      align-items: center
+    ), 1 2 3);
+    @include flexbox((
+      align-items: center
+    ), 3);
+  }
+}
+
+%flex-wrap {
+  &--wrap {
+    @include flexbox((
+      flex-wrap: wrap
+    ), 1 2 3);
+    @include flexbox((
+      flex-wrap: wrap
+    ), 3);
+  }
+}
+
 %appearance-none {
   @include appearance(none);
 }

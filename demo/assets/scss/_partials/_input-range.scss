@@ -1,0 +1,63 @@
+.input-range {
+  @extend %display-flex;
+  @extend %justify-content--center;
+  @extend %flex-wrap--wrap;
+  width: 100%;
+  & > div {
+    width: 100%;
+    text-align: center;
+    line-height: 150%;
+  }
+}
+
+input[type=range] {
+  position: relative;
+  width: 90%;
+  margin: 16px 0;
+  @include appearance(none);
+  &:focus {
+    outline: none;
+    &::-webkit-slider-thumb {
+      width: 24px;
+      height: 24px;
+    }
+    &::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+    }
+    &::-ms-thumb {
+      width: 24px;
+      height: 24px;
+    }
+  }
+  &::-webkit-slider {
+    &-runnable-track {
+      @include input-range--track(4px, $primary-color, 4px);
+    }
+    &-thumb {
+      @include input-range--thumb(16px, 16px, $primary-color);
+    }
+  }
+  &::-moz-range {
+    &-track {
+      @include input-range--track(4px, $primary-color, 4px);
+    }
+    &-thumb {
+      @include input-range--thumb(16px, 16px, $primary-color);
+    }
+  }
+
+  &::-ms {
+    &-track {
+      @include input-range--track(4px, $primary-color, 4px);
+    }
+    &-thumb {
+      @include input-range--thumb(16px, 16px, $primary-color);
+    }
+    &-fill-lower, &-fill-upper {
+      background: $primary-color;
+      border: none;
+      @include border-radius(50%);
+      @include box-shadow(none);
+    }
+  }}

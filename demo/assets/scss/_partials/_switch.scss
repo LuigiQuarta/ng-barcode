@@ -1,0 +1,57 @@
+.switch {
+  &-input {
+    display: none;
+  }
+
+  &-label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 500;
+    text-align: left;
+    margin: get($switch, margin);
+    padding: get($switch, padding);
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      margin: 0;
+      outline: 0;
+      top: 50%;
+      @include transform(translate(0, -50%));
+      @include transition(all .3s ease);
+    }
+    &:before {
+      left: 1px;
+      width: get($bar, width);
+      height: get($bar, height);
+      background-color: get($bar, color, default);
+      @include border-radius(8px);
+    }
+    &:after {
+      left: 0;
+      width: get($thumb, width);
+      height: get($thumb, height);
+      background-color: get($thumb, color, default);
+      @include border-radius(50%);
+      @include box-shadow($thumb-shadow);
+    }
+    & .toggle {
+      &--on { display: none; }
+      &--off { display: inline-block; }
+    }
+  }
+
+  &-input:checked + &-label {
+    &:before {
+      background-color: get($bar, color, active);
+    }
+    &:after {
+      background-color: get($thumb, color, active);
+      @include transform(translate(80%, -50%));
+    }
+    & .toggle {
+      &--on { display: inline-block; }
+      &--off { display: none; }
+    }
+  }
+}

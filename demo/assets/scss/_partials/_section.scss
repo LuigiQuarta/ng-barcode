@@ -1,0 +1,9 @@
+section, .section {
+  padding: 48px 0;
+  margin: 48px auto;
+  border-top: 1px solid $divider-color;
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 24px;
+  }
+}
