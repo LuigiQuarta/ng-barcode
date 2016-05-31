@@ -5,7 +5,7 @@ An AngularJS directive that creates code39 barcodes based on the Antonello Pasel
 
 # Demo
 
-Try ng-barcode using this [online demo](http://zoimaru.github.io/ng-barcode/).
+Try ng-barcode using this [online demo](http://luigiquarta.github.io/ng-barcode/).
 
 # Usage
 
